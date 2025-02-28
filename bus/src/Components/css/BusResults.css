@@ -1,0 +1,76 @@
+
+.bus-results-container {
+    min-height: 100vh;
+    width:500px;
+    background-color: #f3f4f6;
+    padding: 24px;
+  }
+
+  .bus-results-wrapper {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .back-button {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 16px;
+    transition: color 0.3s ease;
+  }
+
+  .back-button:hover {
+    color:rgb(5, 5, 5);
+    background-color: white;
+  }
+
+  .heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f2937;
+    margin-bottom: 24px;
+  }
+
+  .bus-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .bus-card {
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .bus-card:hover {
+    transform: scale(1.02);
+  }
+
+  .bus-icon {
+    font-size: 32px;
+    color: black;
+    margin-right: 12px;
+  }
+
+  .bus-info {
+    flex: 1;
+  }
+
+  .bus-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1f2937;
+  }
+
+  .bus-details {
+    font-size: 14px;
+    color: #4b5563;
+  }
