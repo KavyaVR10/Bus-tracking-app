@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Components/css/Mainpage.css";
+import "../Components/css/MainPage.css"
 import { FaBus } from "react-icons/fa";
 
 const Mainpage = () => {
