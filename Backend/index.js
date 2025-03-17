@@ -31,7 +31,9 @@ const BusSchema = new mongoose.Schema({
   schedule: [
     { departureTime: String, arrivalTime: String, days: [String] }
   ],
+  stations: [String],  // Array of in-between stations
 });
+
 const Bus = mongoose.model("Bus", BusSchema, "Buses");
 
 app.post("/signup", async (req, res) => {
@@ -101,6 +103,26 @@ app.get("/getBuses", async (req, res) => {
     res.status(500).json({ message: "Error fetching bus data", error });
   }
 });
+app.get("/bus/:name/stations", async (req, res) => {
+  try {
+    const busName = req.params.name.trim();
+    console.log("Received request for bus:", busName); // Debugging log
+
+    const bus = await Bus.findOne({ busName: busName }); // Use busName instead of _id
+
+    if (!bus) {
+      return res.status(404).json({ message: "Bus not found" });
+    }
+
+    res.json(bus.stations); // Return the stations array
+  } catch (error) {
+    console.error("Error fetching stations:", error);
+    res.status(500).json({ message: "Error fetching stations", error });
+  }
+});
+
+
+
 
 app.post("/payment", (req, res) => {
   res.json({ message: "Payment Successful" });
