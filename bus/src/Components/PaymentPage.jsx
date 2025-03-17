@@ -10,7 +10,7 @@ const PaymentPage = () => {
     setPaymentSuccess(true);
 
     setTimeout(() => {
-      navigate("/"); // Redirect to home page
+      navigate("/");
     }, 3000);
   };
 

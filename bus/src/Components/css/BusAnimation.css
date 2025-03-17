@@ -1,4 +1,4 @@
-/* Container Styling */
+
 .route-container {
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
   margin: auto;
 }
 
-/* Route Timeline */
+
 .route-line {
   position: relative;
   width: 4px;
@@ -21,7 +21,7 @@
   right:25%;
 }
 
-/* Individual Stations */
+
 .station {
   display: flex;
   align-items: center;
@@ -33,7 +33,7 @@
   margin-bottom: 0;
 }
 
-/* Circle Indicator */
+
 .station::before {
   content: "";
   width: 15px;
@@ -44,7 +44,7 @@
   left: -7px;
 }
 
-/* Station Name */
+
 .station p {
   background: white;
   padding: 8px 50px;

@@ -10,12 +10,9 @@ app.use(cors());
 app.use(express.json());
 
 
-mongoose.connect(process.env.MONGODB_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => console.log("MongoDB Connected"))
+mongoose.connect(process.env.MONGODB_URL)
+  .then(() => console.log("MongoDB Connected"))
   .catch(err => console.error("MongoDB Connection Error:", err));
-
 
 const UserSchema = new mongoose.Schema({
   username: String,
@@ -31,7 +28,7 @@ const BusSchema = new mongoose.Schema({
   schedule: [
     { departureTime: String, arrivalTime: String, days: [String] }
   ],
-  stations: [String],  // Array of in-between stations
+  stations: [String],
 });
 
 const Bus = mongoose.model("Bus", BusSchema, "Buses");

@@ -38,7 +38,6 @@ const BusBooking = () => {
       </div>
 
       <div className="button-container">
-        {/* 🚍 View Route Button - Navigates to BusRoutePage */}
         <button
           className="route-button"
           onClick={() => navigate(`/bus-route/${bus.id}`, { state: bus })}
@@ -46,7 +45,6 @@ const BusBooking = () => {
           View Route
         </button>
 
-        {/* 💳 Payment Button - Navigates to Payment Page */}
         <button
           className="payment-button"
           onClick={() => navigate("/payment")}
